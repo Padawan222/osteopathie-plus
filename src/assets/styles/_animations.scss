@@ -21,10 +21,10 @@
   0% {
     opacity: 0;
   }
-  50% {
+  51% {
     opacity: 0;
   }
-  51% {
+  52% {
     opacity: 1;
   }
   80% {
@@ -51,5 +51,13 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes container-start {
+  0% {
+    background: var(--beige);
+  }
+  100% {
+    background: var(--beige);
   }
 }
