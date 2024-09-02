@@ -176,6 +176,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.container {
   font-style: normal;
   font-weight: 400;
   animation: text-anim-start 3s;
+  z-index: 1000;
 }
 
 .text-anim-start-p1 {
@@ -186,7 +187,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.container {
 .text-anim-start-p2 {
   display: none;
   animation: text-anim-start-p2 3s;
-}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;AACF;;AACA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,YAAA;EACA,eAAA;EACA,4BAAA;EACA,kBAAA;EACA,gBAAA;EACA,6BAAA;AAEF;;AAAA;EACE,aAAA;EACA,kCAAA;AAGF;;AADA;EACE,aAAA;EACA,gCAAA;AAIF","sourcesContent":[".container {\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.text-anim-start {\r\n  display: none;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  display: none;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  display: none;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;AACF;;AACA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,YAAA;EACA,eAAA;EACA,4BAAA;EACA,kBAAA;EACA,gBAAA;EACA,6BAAA;EACA,aAAA;AAEF;;AAAA;EACE,aAAA;EACA,kCAAA;AAGF;;AADA;EACE,aAAA;EACA,gCAAA;AAIF","sourcesContent":[".container {\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.text-anim-start {\r\n  display: none;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n  z-index: 1000;\r\n}\r\n.text-anim-start-p1 {\r\n  display: none;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  display: none;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
