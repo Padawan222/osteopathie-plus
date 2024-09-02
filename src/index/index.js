@@ -13,7 +13,7 @@ setTimeout(() => {
   element2.addEventListener("animationend", () => {
     element2.style.display = "none";
   });
-}, 1500);
+}, 1600);
 
 setTimeout(() => {
   const element = document.querySelector(".text-anim-start");
