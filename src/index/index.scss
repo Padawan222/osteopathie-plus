@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 .text-anim-start {
-  display: none;
+  opacity: 0;
   height: 7.5rem;
   text-align: center;
   background: red;
@@ -18,10 +18,10 @@
   z-index: 1000;
 }
 .text-anim-start-p1 {
-  display: none;
+  opacity: 0;
   animation: text-anim-start-p1 1.5s;
 }
 .text-anim-start-p2 {
-  display: none;
+  opacity: 0;
   animation: text-anim-start-p2 3s;
 }
