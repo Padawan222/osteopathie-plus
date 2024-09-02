@@ -6,11 +6,6 @@
     height: 47%;
   }
 }
-@keyframes text-anim-start {
-  0% {
-    opacity: 1;
-  }
-}
 @keyframes text-anim-start-p1 {
   0% {
     opacity: 1;
@@ -37,6 +32,14 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes text-anim-start {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes opacity {
