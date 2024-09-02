@@ -1,0 +1,26 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-anim-start {
+  display: none;
+  height: 7.5rem;
+  text-align: center;
+  background: var(--beige);
+  color: white;
+  font-size: 6rem;
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 400;
+  animation: text-anim-start 3s;
+}
+.text-anim-start-p1 {
+  display: none;
+  animation: text-anim-start-p1 1.5s;
+}
+.text-anim-start-p2 {
+  display: none;
+  animation: text-anim-start-p2 3s;
+}

@@ -1,0 +1,54 @@
+@keyframes anim-start {
+  0% {
+    height: 50vh;
+  }
+  50% {
+    height: 50vh;
+  }
+}
+@keyframes text-anim-start-p2 {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text-anim-start-p1 {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text-anim-start {
+  0% {
+    display: block;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
