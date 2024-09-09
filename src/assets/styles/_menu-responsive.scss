@@ -1,0 +1,69 @@
+@use "media-queries" as *;
+
+// btn xs
+
+.btn-xs {
+  display: none;
+}
+@include xs {
+  .btn-xs {
+    display: flex;
+  }
+}
+@include sm {
+  .btn-xs {
+    display: flex;
+  }
+}
+
+.btn-xs {
+  position: absolute;
+  right: 0;
+  height: 2.5rem;
+  width: 3rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 2s;
+  cursor: pointer;
+  margin: 1rem;
+  animation: opacity 7s;
+}
+
+.bar {
+  height: 2px;
+  width: 2.5rem;
+  background: white;
+  position: absolute;
+  transition: all 0.3s;
+}
+.bar-1 {
+  top: 0;
+}
+.bar-1-active-1 {
+  top: calc(50% - 1px);
+}
+.bar-1-active-2 {
+  rotate: 45deg;
+}
+
+.bar-2-active {
+  opacity: 0;
+}
+.bar-3 {
+  bottom: 0;
+}
+.bar-3-active-1 {
+  bottom: calc(50% - 1px);
+}
+.bar-3-active-2 {
+  rotate: -45deg;
+}
+.nav-active-1-xs {
+  transition: 1s;
+  transform: translateX(100%);
+}
+.nav-active-2-xs {
+  transition: 1s;
+  transform: translateX(0%);
+}

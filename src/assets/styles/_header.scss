@@ -1,6 +1,8 @@
+@use "media-queries" as *;
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 8rem;
   width: 100%;
   background: var(--beige);
@@ -12,10 +14,15 @@ h1 {
   font-family: var(--ff-title);
   font-weight: 200;
   font-size: 4rem;
-  animation: opacity 7s;
 }
 .img-header {
   height: 6rem;
   margin: 0 2rem;
+  @include xs {
+    margin: 0 1rem;
+  }
+}
+.container-logo-title {
+  display: flex;
   animation: opacity 7s;
 }

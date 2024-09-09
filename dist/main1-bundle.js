@@ -51,6 +51,7 @@ body {
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 8rem;
   width: 100%;
   background: var(--beige);
@@ -63,13 +64,149 @@ h1 {
   font-family: var(--ff-title);
   font-weight: 200;
   font-size: 4rem;
-  animation: opacity 7s;
 }
 
 .img-header {
   height: 6rem;
   margin: 0 2rem;
+}
+@media (max-width: 480px) {
+  .img-header {
+    margin: 0 1rem;
+  }
+}
+
+.container-logo-title {
+  display: flex;
   animation: opacity 7s;
+}
+
+.btn-xs {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .btn-xs {
+    display: flex;
+  }
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  .btn-xs {
+    display: flex;
+  }
+}
+.btn-xs {
+  position: absolute;
+  right: 0;
+  height: 2.5rem;
+  width: 3rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 2s;
+  cursor: pointer;
+  margin: 1rem;
+  animation: opacity 7s;
+}
+
+.bar {
+  height: 2px;
+  width: 2.5rem;
+  background: white;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.bar-1 {
+  top: 0;
+}
+
+.bar-1-active-1 {
+  top: calc(50% - 1px);
+}
+
+.bar-1-active-2 {
+  rotate: 45deg;
+}
+
+.bar-2-active {
+  opacity: 0;
+}
+
+.bar-3 {
+  bottom: 0;
+}
+
+.bar-3-active-1 {
+  bottom: calc(50% - 1px);
+}
+
+.bar-3-active-2 {
+  rotate: -45deg;
+}
+
+.nav-active-1-xs {
+  transition: 1s;
+  transform: translateX(100%);
+}
+
+.nav-active-2-xs {
+  transition: 1s;
+  transform: translateX(0%);
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  animation: opacity 7s;
+  background: var(--beige);
+}
+@media (max-width: 480px) {
+  nav {
+    height: 8rem;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 8rem;
+    margin: 0 0;
+    animation: none;
+    animation: menu-responsive 1s;
+  }
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  nav {
+    height: 8rem;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    position: absolute;
+    top: 8rem;
+    margin: 0 0;
+    animation: none;
+    animation: menu-responsive 1s;
+  }
+}
+
+.element-nav-bar {
+  margin: 0 2rem;
+  color: white;
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  font-family: var(--ff-title);
+  text-decoration: none;
+  transition: all 1s;
+}
+.element-nav-bar:hover {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: #5f27cd;
+}
+@media (max-width: 480px) {
+  .element-nav-bar {
+    margin: 1rem;
+  }
 }
 
 footer {
@@ -141,7 +278,19 @@ footer {
   100% {
     background: var(--beige);
   }
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;ACCF;;ADCA;EACE,+BAAA;EACA,kBAAA;EACA,iBAAA;EACA,WAAA;ACEF;;ACTA,8BAAA;AAMA,uCAAA;AAMA,6CAAA;AAMA,kBAAA;AClBA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AFgBF;;AGnBA;EAEE,gBAAA;EAEA,mCAAA;EACA,kCAAA;AHoBF;;AIzBA;EACE,aAAA;EACA,mBAAA;EACA,YAAA;EACA,WAAA;EACA,wBAAA;EACA,wBAAA;AJ4BF;;AI1BA;EACE,gBAAA;EACA,YAAA;EACA,4BAAA;EACA,gBAAA;EACA,eAAA;EACA,qBAAA;AJ6BF;;AI3BA;EACE,YAAA;EACA,cAAA;EACA,qBAAA;AJ8BF;;AKjDA;EACE,YAAA;EACA,WAAA;EACA,wBAAA;EACA,wBAAA;ALoDF;;AMxDA;EACE;IACE,WAAA;EN2DF;EMzDA;IACE,WAAA;EN2DF;AACF;AMzDA;EACE;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;AACF;AMzDA;EACE;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;AACF;AMzDA;EACE;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;AACF;AMzDA;EACE;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;EMzDA;IACE,UAAA;EN2DF;AACF;AMzDA;EACE;IACE,wBAAA;EN2DF;EMzDA;IACE,wBAAA;EN2DF;AACF","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","html {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n\n/* Landscape phones and down */\n/* Landscape phone to portrait tablet */\n/* Portrait tablet to landscape and desktop */\n/* Large desktop */\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --beige: #d5c2a1;\n  --font-family: \"Nunito\", sans-serif;\n  --ff-title: \"Great Vibes\", cursive;\n}\n\nheader {\n  display: flex;\n  align-items: center;\n  height: 8rem;\n  width: 100%;\n  background: var(--beige);\n  animation: anim-start 6s;\n}\n\nh1 {\n  margin-top: 1rem;\n  color: white;\n  font-family: var(--ff-title);\n  font-weight: 200;\n  font-size: 4rem;\n  animation: opacity 7s;\n}\n\n.img-header {\n  height: 6rem;\n  margin: 0 2rem;\n  animation: opacity 7s;\n}\n\nfooter {\n  height: 8rem;\n  width: 100%;\n  background: var(--beige);\n  animation: anim-start 6s;\n}\n\n@keyframes anim-start {\n  0% {\n    height: 50%;\n  }\n  50% {\n    height: 50%;\n  }\n}\n@keyframes text-anim-start-p1 {\n  0% {\n    opacity: 1;\n  }\n  80% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes text-anim-start-p2 {\n  0% {\n    opacity: 0;\n  }\n  55% {\n    opacity: 0;\n  }\n  56% {\n    opacity: 1;\n  }\n  80% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes text-anim-start {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes opacity {\n  0% {\n    opacity: 0;\n  }\n  80% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes container-start {\n  0% {\n    background: var(--beige);\n  }\n  100% {\n    background: var(--beige);\n  }\n}","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n","header {\r\n  display: flex;\r\n  align-items: center;\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n  animation: opacity 7s;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n}\r\n","footer {\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\n","@keyframes anim-start {\r\n  0% {\r\n    height: 50%;\r\n  }\r\n  50% {\r\n    height: 50%;\r\n  }\r\n}\r\n@keyframes text-anim-start-p1 {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start-p2 {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  55% {\r\n    opacity: 0;\r\n  }\r\n  56% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes opacity {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes container-start {\r\n  0% {\r\n    background: var(--beige);\r\n  }\r\n  100% {\r\n    background: var(--beige);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}
+@keyframes menu-responsive {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: container-start 3s;
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_menu-responsive.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"header\" as *;\r\n@use \"header-container\" as *;\r\n@use \"nav-bar\" as *;\r\n@use \"menu-responsive\" as *;\r\n@use \"menu\" as *;\r\n@use \"btn\" as *;\r\n@use \"footer\" as *;\r\n@use \"animations\" as *;\r\n.container {\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  animation: container-start 3s;\r\n}\r\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n","@use \"media-queries\" as *;\r\nheader {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  @include xs {\r\n    margin: 0 1rem;\r\n  }\r\n}\r\n.container-logo-title {\r\n  display: flex;\r\n  animation: opacity 7s;\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// btn xs\r\n\r\n.btn-xs {\r\n  display: none;\r\n}\r\n@include xs {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.btn-xs {\r\n  position: absolute;\r\n  right: 0;\r\n  height: 2.5rem;\r\n  width: 3rem;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n  transition: all 2s;\r\n  cursor: pointer;\r\n  margin: 1rem;\r\n  animation: opacity 7s;\r\n}\r\n\r\n.bar {\r\n  height: 2px;\r\n  width: 2.5rem;\r\n  background: white;\r\n  position: absolute;\r\n  transition: all 0.3s;\r\n}\r\n.bar-1 {\r\n  top: 0;\r\n}\r\n.bar-1-active-1 {\r\n  top: calc(50% - 1px);\r\n}\r\n.bar-1-active-2 {\r\n  rotate: 45deg;\r\n}\r\n\r\n.bar-2-active {\r\n  opacity: 0;\r\n}\r\n.bar-3 {\r\n  bottom: 0;\r\n}\r\n.bar-3-active-1 {\r\n  bottom: calc(50% - 1px);\r\n}\r\n.bar-3-active-2 {\r\n  rotate: -45deg;\r\n}\r\n.nav-active-1-xs {\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.nav-active-2-xs {\r\n  transition: 1s;\r\n  transform: translateX(0%);\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nnav {\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n  background: var(--beige);\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    justify-content: space-around;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n}\r\n.element-nav-bar {\r\n  margin: 0 2rem;\r\n  color: white;\r\n  font-size: 2.8rem;\r\n  letter-spacing: 0.1rem;\r\n  font-family: var(--ff-title);\r\n  text-decoration: none;\r\n  transition: all 1s;\r\n  &:hover {\r\n    font-size: 3rem;\r\n    letter-spacing: 0.2rem;\r\n    color: #5f27cd;\r\n  }\r\n\r\n  @include xs {\r\n    margin: 1rem;\r\n  }\r\n}\r\n","footer {\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\n","@keyframes anim-start {\r\n  0% {\r\n    height: 50%;\r\n  }\r\n  50% {\r\n    height: 50%;\r\n  }\r\n}\r\n@keyframes text-anim-start-p1 {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start-p2 {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  55% {\r\n    opacity: 0;\r\n  }\r\n  56% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes opacity {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes container-start {\r\n  0% {\r\n    background: var(--beige);\r\n  }\r\n  100% {\r\n    background: var(--beige);\r\n  }\r\n}\r\n@keyframes menu-responsive {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -167,15 +316,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  animation: container-start 3s;
-}
-
-.text-anim-start {
+___CSS_LOADER_EXPORT___.push([module.id, `.text-anim-start {
   opacity: 0;
   height: 7.5rem;
   text-align: center;
@@ -196,7 +337,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.container {
 .text-anim-start-p2 {
   opacity: 0;
   animation: text-anim-start-p2 3s;
-}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,6BAAA;AACF;;AACA;EACE,UAAA;EACA,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,YAAA;EACA,eAAA;EACA,4BAAA;EACA,kBAAA;EACA,gBAAA;EACA,6BAAA;AAEF;;AAAA;EACE,UAAA;EACA,kCAAA;AAGF;;AADA;EACE,UAAA;EACA,gCAAA;AAIF","sourcesContent":[".container {\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  animation: container-start 3s;\r\n}\r\n.text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,UAAA;EACA,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,YAAA;EACA,eAAA;EACA,4BAAA;EACA,kBAAA;EACA,gBAAA;EACA,6BAAA;AACF;;AACA;EACE,UAAA;EACA,kCAAA;AAEF;;AAAA;EACE,UAAA;EACA,gCAAA;AAGF","sourcesContent":[".text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -775,6 +916,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/index/index.scss");
 
 
+
+// anim start
+
 var element1 = document.querySelector(".text-anim-start-p1");
 element1.addEventListener("animationend", function () {
   element1.style.display = "none";
@@ -791,6 +935,41 @@ setTimeout(function () {
     element.style.display = "none";
   });
 }, 3000);
+
+// btn xs
+var btn = document.querySelector(".btn-xs");
+var bar1 = document.querySelector(".bar-1");
+var bar2 = document.querySelector(".bar-2");
+var bar3 = document.querySelector(".bar-3");
+var nav = document.querySelector("nav");
+var containerGeneral = document.querySelector(".container-general");
+btn.addEventListener("click", function () {
+  if (bar1.classList.contains("bar-1-active-1")) {
+    bar1.classList.remove("bar-1-active-2");
+    bar3.classList.remove("bar-3-active-2");
+    nav.classList.remove("nav-active-1-xs");
+    nav.classList.remove("nav-active-2-xs");
+    setTimeout(function () {
+      bar1.classList.remove("bar-1-active-1");
+      bar2.classList.remove("bar-2-active");
+      bar3.classList.remove("bar-3-active-1");
+      nav.classList.add("nav-active-1-xs");
+    }, 300);
+    setTimeout(function () {
+      nav.style.display = "none";
+      nav.classList.add("nav-active-2-xs");
+    }, 1100);
+  } else {
+    bar1.classList.add("bar-1-active-1");
+    bar2.classList.add("bar-2-active");
+    bar3.classList.add("bar-3-active-1");
+    setTimeout(function () {
+      bar1.classList.add("bar-1-active-2");
+      bar3.classList.add("bar-3-active-2");
+      nav.style.display = "flex";
+    }, 300);
+  }
+});
 /******/ })()
 ;
 //# sourceMappingURL=main1-bundle.js.map

@@ -14,3 +14,10 @@
 @use "btn" as *;
 @use "footer" as *;
 @use "animations" as *;
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: container-start 3s;
+}

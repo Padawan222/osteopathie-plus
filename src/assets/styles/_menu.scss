@@ -1,0 +1,49 @@
+@use "media-queries" as *;
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  animation: opacity 7s;
+  background: var(--beige);
+  @include xs {
+    height: 8rem;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 8rem;
+    margin: 0 0;
+    animation: none;
+    animation: menu-responsive 1s;
+  }
+  @include sm {
+    height: 8rem;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    position: absolute;
+    top: 8rem;
+    margin: 0 0;
+    animation: none;
+    animation: menu-responsive 1s;
+  }
+}
+.element-nav-bar {
+  margin: 0 2rem;
+  color: white;
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  font-family: var(--ff-title);
+  text-decoration: none;
+  transition: all 1s;
+  &:hover {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    color: #5f27cd;
+  }
+
+  @include xs {
+    margin: 1rem;
+  }
+}
