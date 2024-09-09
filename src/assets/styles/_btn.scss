@@ -1,0 +1,19 @@
+.btn {
+  height: 5rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  margin-top: 5rem;
+  text-decoration: none;
+  background: var(--beige);
+  color: white;
+  font-size: 1.8rem;
+  transition: 1s;
+  &:hover {
+    background: white;
+    font-size: 2rem;
+    color: var(--violet);
+  }
+}

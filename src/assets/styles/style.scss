@@ -16,8 +16,31 @@
 @use "animations" as *;
 .container {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid:
+    "header" auto
+    "main" auto
+    "footer" auto
+    / auto;
   animation: container-start 3s;
+}
+.text-anim-start {
+  opacity: 0;
+  height: 7.5rem;
+  text-align: center;
+  background: var(--beige);
+  color: white;
+  font-size: 6rem;
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 400;
+  animation: text-anim-start 3s;
+}
+.text-anim-start-p1 {
+  opacity: 0;
+  animation: text-anim-start-p1 1.5s;
+}
+.text-anim-start-p2 {
+  opacity: 0;
+  animation: text-anim-start-p2 3s;
 }

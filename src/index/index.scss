@@ -1,20 +1,41 @@
-.text-anim-start {
-  opacity: 0;
-  height: 7.5rem;
-  text-align: center;
-  background: var(--beige);
-  color: white;
-  font-size: 6rem;
+main {
+  grid-area: main;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eee;
+}
+h2 {
+  margin: 5rem;
   font-family: var(--ff-title);
-  font-style: normal;
-  font-weight: 400;
-  animation: text-anim-start 3s;
+  font-weight: 200;
+  font-size: 4rem;
+  color: var(--violet);
 }
-.text-anim-start-p1 {
-  opacity: 0;
-  animation: text-anim-start-p1 1.5s;
+.osteopathie-content {
+  height: auto;
+  width: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  background: white;
+  border-radius: 3rem;
 }
-.text-anim-start-p2 {
-  opacity: 0;
-  animation: text-anim-start-p2 3s;
+.osteopathie-container {
+  display: flex;
+  align-items: center;
+}
+.img-main-1 {
+  height: 30rem;
+  animation: opacity 7s;
+}
+.text-osteopathie {
+  width: 30rem;
+  margin-left: 5rem;
+  font-size: 2rem;
+  color: var(--violet);
 }

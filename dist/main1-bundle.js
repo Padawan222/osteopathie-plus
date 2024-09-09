@@ -44,11 +44,20 @@ body {
 
 :root {
   --beige: #d5c2a1;
+  --violet: #5f27cd;
   --font-family: "Nunito", sans-serif;
   --ff-title: "Great Vibes", cursive;
 }
 
+.title {
+  font-family: var(--ff-title);
+  font-weight: 200;
+  font-size: 3rem;
+  color: #5f27cd;
+}
+
 header {
+  grid-area: header;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -209,76 +218,34 @@ nav {
   }
 }
 
+.btn {
+  height: 5rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  margin-top: 5rem;
+  text-decoration: none;
+  background: var(--beige);
+  color: white;
+  font-size: 1.8rem;
+  transition: 1s;
+}
+.btn:hover {
+  background: white;
+  font-size: 2rem;
+  color: var(--violet);
+}
+
 footer {
+  grid-area: footer;
   height: 8rem;
   width: 100%;
   background: var(--beige);
   animation: anim-start 6s;
 }
 
-@keyframes anim-start {
-  0% {
-    height: 50%;
-  }
-  50% {
-    height: 50%;
-  }
-}
-@keyframes text-anim-start-p1 {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes text-anim-start-p2 {
-  0% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 0;
-  }
-  56% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes text-anim-start {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes container-start {
-  0% {
-    background: var(--beige);
-  }
-  100% {
-    background: var(--beige);
-  }
-}
 @keyframes menu-responsive {
   0% {
     transform: translateX(-100%);
@@ -286,11 +253,33 @@ footer {
 }
 .container {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid: "header" auto "main" auto "footer" auto/auto;
   animation: container-start 3s;
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_menu-responsive.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"header\" as *;\r\n@use \"header-container\" as *;\r\n@use \"nav-bar\" as *;\r\n@use \"menu-responsive\" as *;\r\n@use \"menu\" as *;\r\n@use \"btn\" as *;\r\n@use \"footer\" as *;\r\n@use \"animations\" as *;\r\n.container {\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  animation: container-start 3s;\r\n}\r\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n","@use \"media-queries\" as *;\r\nheader {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  @include xs {\r\n    margin: 0 1rem;\r\n  }\r\n}\r\n.container-logo-title {\r\n  display: flex;\r\n  animation: opacity 7s;\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// btn xs\r\n\r\n.btn-xs {\r\n  display: none;\r\n}\r\n@include xs {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.btn-xs {\r\n  position: absolute;\r\n  right: 0;\r\n  height: 2.5rem;\r\n  width: 3rem;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n  transition: all 2s;\r\n  cursor: pointer;\r\n  margin: 1rem;\r\n  animation: opacity 7s;\r\n}\r\n\r\n.bar {\r\n  height: 2px;\r\n  width: 2.5rem;\r\n  background: white;\r\n  position: absolute;\r\n  transition: all 0.3s;\r\n}\r\n.bar-1 {\r\n  top: 0;\r\n}\r\n.bar-1-active-1 {\r\n  top: calc(50% - 1px);\r\n}\r\n.bar-1-active-2 {\r\n  rotate: 45deg;\r\n}\r\n\r\n.bar-2-active {\r\n  opacity: 0;\r\n}\r\n.bar-3 {\r\n  bottom: 0;\r\n}\r\n.bar-3-active-1 {\r\n  bottom: calc(50% - 1px);\r\n}\r\n.bar-3-active-2 {\r\n  rotate: -45deg;\r\n}\r\n.nav-active-1-xs {\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.nav-active-2-xs {\r\n  transition: 1s;\r\n  transform: translateX(0%);\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nnav {\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n  background: var(--beige);\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    justify-content: space-around;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n}\r\n.element-nav-bar {\r\n  margin: 0 2rem;\r\n  color: white;\r\n  font-size: 2.8rem;\r\n  letter-spacing: 0.1rem;\r\n  font-family: var(--ff-title);\r\n  text-decoration: none;\r\n  transition: all 1s;\r\n  &:hover {\r\n    font-size: 3rem;\r\n    letter-spacing: 0.2rem;\r\n    color: #5f27cd;\r\n  }\r\n\r\n  @include xs {\r\n    margin: 1rem;\r\n  }\r\n}\r\n","footer {\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\n","@keyframes anim-start {\r\n  0% {\r\n    height: 50%;\r\n  }\r\n  50% {\r\n    height: 50%;\r\n  }\r\n}\r\n@keyframes text-anim-start-p1 {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start-p2 {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  55% {\r\n    opacity: 0;\r\n  }\r\n  56% {\r\n    opacity: 1;\r\n  }\r\n  80% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 0;\r\n  }\r\n}\r\n@keyframes text-anim-start {\r\n  0% {\r\n    opacity: 1;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes opacity {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes container-start {\r\n  0% {\r\n    background: var(--beige);\r\n  }\r\n  100% {\r\n    background: var(--beige);\r\n  }\r\n}\r\n@keyframes menu-responsive {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}
+
+.text-anim-start {
+  opacity: 0;
+  height: 7.5rem;
+  text-align: center;
+  background: var(--beige);
+  color: white;
+  font-size: 6rem;
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 400;
+  animation: text-anim-start 3s;
+}
+
+.text-anim-start-p1 {
+  opacity: 0;
+  animation: text-anim-start-p1 1.5s;
+}
+
+.text-anim-start-p2 {
+  opacity: 0;
+  animation: text-anim-start-p2 3s;
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_menu-responsive.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_btn.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"header\" as *;\r\n@use \"header-container\" as *;\r\n@use \"nav-bar\" as *;\r\n@use \"menu-responsive\" as *;\r\n@use \"menu\" as *;\r\n@use \"btn\" as *;\r\n@use \"footer\" as *;\r\n@use \"animations\" as *;\r\n.container {\r\n  height: 100vh;\r\n  display: grid;\r\n  grid:\r\n    \"header\" auto\r\n    \"main\" auto\r\n    \"footer\" auto\r\n    / auto;\r\n  animation: container-start 3s;\r\n}\r\n.text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  --violet: #5f27cd;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n",".title {\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 3rem;\r\n  color: #5f27cd;\r\n}\r\n","@use \"media-queries\" as *;\r\nheader {\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  @include xs {\r\n    margin: 0 1rem;\r\n  }\r\n}\r\n.container-logo-title {\r\n  display: flex;\r\n  animation: opacity 7s;\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// btn xs\r\n\r\n.btn-xs {\r\n  display: none;\r\n}\r\n@include xs {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.btn-xs {\r\n  position: absolute;\r\n  right: 0;\r\n  height: 2.5rem;\r\n  width: 3rem;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n  transition: all 2s;\r\n  cursor: pointer;\r\n  margin: 1rem;\r\n  animation: opacity 7s;\r\n}\r\n\r\n.bar {\r\n  height: 2px;\r\n  width: 2.5rem;\r\n  background: white;\r\n  position: absolute;\r\n  transition: all 0.3s;\r\n}\r\n.bar-1 {\r\n  top: 0;\r\n}\r\n.bar-1-active-1 {\r\n  top: calc(50% - 1px);\r\n}\r\n.bar-1-active-2 {\r\n  rotate: 45deg;\r\n}\r\n\r\n.bar-2-active {\r\n  opacity: 0;\r\n}\r\n.bar-3 {\r\n  bottom: 0;\r\n}\r\n.bar-3-active-1 {\r\n  bottom: calc(50% - 1px);\r\n}\r\n.bar-3-active-2 {\r\n  rotate: -45deg;\r\n}\r\n.nav-active-1-xs {\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.nav-active-2-xs {\r\n  transition: 1s;\r\n  transform: translateX(0%);\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nnav {\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n  background: var(--beige);\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    justify-content: space-around;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n}\r\n.element-nav-bar {\r\n  margin: 0 2rem;\r\n  color: white;\r\n  font-size: 2.8rem;\r\n  letter-spacing: 0.1rem;\r\n  font-family: var(--ff-title);\r\n  text-decoration: none;\r\n  transition: all 1s;\r\n  &:hover {\r\n    font-size: 3rem;\r\n    letter-spacing: 0.2rem;\r\n    color: #5f27cd;\r\n  }\r\n\r\n  @include xs {\r\n    margin: 1rem;\r\n  }\r\n}\r\n",".btn {\r\n  height: 5rem;\r\n  width: 15rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 3rem;\r\n  margin-top: 5rem;\r\n  text-decoration: none;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 1.8rem;\r\n  transition: 1s;\r\n  &:hover {\r\n    background: white;\r\n    font-size: 2rem;\r\n    color: var(--violet);\r\n  }\r\n}\r\n","footer {\r\n  grid-area: footer;\r\n  height: 8rem;\r\n  width: 100%;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n}\r\n","// @keyframes anim-start {\r\n//   0% {\r\n//     height: 50%;\r\n//   }\r\n//   50% {\r\n//     height: 50%;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p1 {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p2 {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   55% {\r\n//     opacity: 0;\r\n//   }\r\n//   56% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes opacity {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   80% {\r\n//     opacity: 0;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes container-start {\r\n//   0% {\r\n//     background: var(--beige);\r\n//   }\r\n//   100% {\r\n//     background: var(--beige);\r\n//   }\r\n// }\r\n@keyframes menu-responsive {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -316,28 +305,52 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.text-anim-start {
-  opacity: 0;
-  height: 7.5rem;
-  text-align: center;
-  background: var(--beige);
-  color: white;
-  font-size: 6rem;
+___CSS_LOADER_EXPORT___.push([module.id, `main {
+  grid-area: main;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eee;
+}
+
+h2 {
+  margin: 5rem;
   font-family: var(--ff-title);
-  font-style: normal;
-  font-weight: 400;
-  animation: text-anim-start 3s;
+  font-weight: 200;
+  font-size: 4rem;
+  color: var(--violet);
 }
 
-.text-anim-start-p1 {
-  opacity: 0;
-  animation: text-anim-start-p1 1.5s;
+.osteopathie-content {
+  height: auto;
+  width: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  background: white;
+  border-radius: 3rem;
 }
 
-.text-anim-start-p2 {
-  opacity: 0;
-  animation: text-anim-start-p2 3s;
-}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,UAAA;EACA,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,YAAA;EACA,eAAA;EACA,4BAAA;EACA,kBAAA;EACA,gBAAA;EACA,6BAAA;AACF;;AACA;EACE,UAAA;EACA,kCAAA;AAEF;;AAAA;EACE,UAAA;EACA,gCAAA;AAGF","sourcesContent":[".text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n"],"sourceRoot":""}]);
+.osteopathie-container {
+  display: flex;
+  align-items: center;
+}
+
+.img-main-1 {
+  height: 30rem;
+  animation: opacity 7s;
+}
+
+.text-osteopathie {
+  width: 30rem;
+  margin-left: 5rem;
+  font-size: 2rem;
+  color: var(--violet);
+}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;AACF;;AACA;EACE,YAAA;EACA,4BAAA;EACA,gBAAA;EACA,eAAA;EACA,oBAAA;AAEF;;AAAA;EACE,YAAA;EACA,WAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,6BAAA;EACA,iBAAA;EACA,mBAAA;AAGF;;AADA;EACE,aAAA;EACA,mBAAA;AAIF;;AAFA;EACE,aAAA;EACA,qBAAA;AAKF;;AAHA;EACE,YAAA;EACA,iBAAA;EACA,eAAA;EACA,oBAAA;AAMF","sourcesContent":["main {\r\n  grid-area: main;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background: #eee;\r\n}\r\nh2 {\r\n  margin: 5rem;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n  color: var(--violet);\r\n}\r\n.osteopathie-content {\r\n  height: auto;\r\n  width: auto;\r\n  padding: 5rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  justify-content: space-evenly;\r\n  background: white;\r\n  border-radius: 3rem;\r\n}\r\n.osteopathie-container {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.img-main-1 {\r\n  height: 30rem;\r\n  animation: opacity 7s;\r\n}\r\n.text-osteopathie {\r\n  width: 30rem;\r\n  margin-left: 5rem;\r\n  font-size: 2rem;\r\n  color: var(--violet);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
