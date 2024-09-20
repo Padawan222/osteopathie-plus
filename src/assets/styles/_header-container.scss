@@ -1,0 +1,29 @@
+.header-container {
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/test-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.header-container-background-none {
+  background: none;
+}
+.container-hc-text {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(1rem);
+  margin: 2rem;
+}
+h2 {
+  font-family: var(--ff-title);
+  font-weight: 200;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}

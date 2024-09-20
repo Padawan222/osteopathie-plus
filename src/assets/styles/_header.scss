@@ -1,14 +1,20 @@
 @use "media-queries" as *;
 header {
+  position: fixed;
+  top: 0;
   grid-area: header;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 8rem;
   width: 100%;
-  background: var(--beige);
   animation: anim-start 6s;
 }
+.header-background {
+  background: url(../images/header-background.png);
+  background-size: cover;
+}
+
 h1 {
   margin-top: 1rem;
   color: white;

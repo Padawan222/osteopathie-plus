@@ -3,27 +3,27 @@ import "./index.scss";
 
 // anim start
 
-const element1 = document.querySelector(".text-anim-start-p1");
+// const element1 = document.querySelector(".text-anim-start-p1");
 
-element1.addEventListener("animationend", () => {
-  element1.style.display = "none";
-});
+// element1.addEventListener("animationend", () => {
+//   element1.style.display = "none";
+// });
 
-setTimeout(() => {
-  const element2 = document.querySelector(".text-anim-start-p2");
+// setTimeout(() => {
+//   const element2 = document.querySelector(".text-anim-start-p2");
 
-  element2.addEventListener("animationend", () => {
-    element2.style.display = "none";
-  });
-}, 1500);
+//   element2.addEventListener("animationend", () => {
+//     element2.style.display = "none";
+//   });
+// }, 1500);
 
-setTimeout(() => {
-  const element = document.querySelector(".text-anim-start");
+// setTimeout(() => {
+//   const element = document.querySelector(".text-anim-start");
 
-  element.addEventListener("animationend", () => {
-    element.style.display = "none";
-  });
-}, 3000);
+//   element.addEventListener("animationend", () => {
+//     element.style.display = "none";
+//   });
+// }, 3000);
 
 // btn xs
 const btn = document.querySelector(".btn-xs");
@@ -58,5 +58,31 @@ btn.addEventListener("click", () => {
       bar3.classList.add("bar-3-active-2");
       nav.style.display = "flex";
     }, 300);
+  }
+});
+// header
+
+const headerContainer = document.querySelector(".header-container");
+const header = document.querySelector("header");
+
+// Convertir 8rem en pixels
+const remToPixels = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+  
+  // Obtenir la position du bas de l'élément par rapport à la fenêtre
+  const bottomElementToTopViewport = headerContainer.getBoundingClientRect().bottom;
+  
+  // Convertir 8rem en pixels
+  const stopScrollDistance = remToPixels(8);
+
+  // Vérifier si le bas de l'élément est à 8rem du haut de la fenêtre
+  if (bottomElementToTopViewport <= stopScrollDistance) {
+    header.classList.add("header-background");
+    headerContainer.classList.add("header-container-background-none");
+  } else {
+    header.classList.remove("header-background");
+    headerContainer.classList.remove("header-container-background-none");
   }
 });

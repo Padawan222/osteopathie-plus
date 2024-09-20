@@ -6,13 +6,7 @@ main {
   align-items: center;
   background: #eee;
 }
-h2 {
-  margin: 5rem;
-  font-family: var(--ff-title);
-  font-weight: 200;
-  font-size: 4rem;
-  color: var(--violet);
-}
+
 .osteopathie-content {
   height: auto;
   width: auto;
@@ -31,7 +25,6 @@ h2 {
 }
 .img-main-1 {
   height: 30rem;
-  animation: opacity 7s;
 }
 .text-osteopathie {
   width: 30rem;
