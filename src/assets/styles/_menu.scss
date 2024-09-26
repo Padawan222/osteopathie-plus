@@ -39,7 +39,7 @@ nav {
   &:hover {
     font-size: 3rem;
     letter-spacing: 0.2rem;
-    color: #5f27cd;
+    // color: var(--violet);
   }
 
   @include xs {

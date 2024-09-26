@@ -1,12 +1,13 @@
 .header-container {
-  height: 50rem;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/test-2.jpg");
+  background-image: url("../images/test-1.jpg");
   background-size: cover;
   background-position: center;
+  z-index: 100;
 }
 .header-container-background-none {
   background: none;
@@ -26,4 +27,14 @@ h2 {
   font-weight: 200;
   font-size: 4rem;
   margin-bottom: 2rem;
+}
+.fleche-header-container {
+  width: 5rem;
+  position: absolute;
+  bottom: 3rem;
+  left: calc(50% - 2.5rem);
+  color: white;
+  font-size: 4rem;
+  rotate: 180deg;
+  scroll-behavior: smooth;
 }

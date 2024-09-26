@@ -1,7 +1,31 @@
 footer {
   grid-area: footer;
-  height: 8rem;
+  height: auto;
   width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: var(--beige);
   animation: anim-start 6s;
+  text-align: center;
+}
+.ft {
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+a {
+  font-style: italic;
+  color: white;
+}
+.link-footer-2 {
+  margin: 0 2rem;
+}
+.link-to-top {
+  text-decoration: none;
 }

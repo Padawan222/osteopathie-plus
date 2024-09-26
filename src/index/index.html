@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/08e0841ef1.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Ostéopathie-plus | Accueil</title>
   </head>
   <body>
@@ -16,14 +20,14 @@
       <!-- name header-container = hc -->
       <div class="header-container">
         <header>
-          <span class="container-logo-title">
+          <a class="container-logo-title" href="index.html">
             <img
               class="img-header"
               src="../src/assets/images/logo-test.png "
               alt="LOGO"
             />
             <h1>Ostéopathie-plus</h1>
-          </span>
+          </a>
           <!-- nav bar xs  -->
           <div class="btn-xs">
             <div class="bar bar-1"></div>
@@ -34,17 +38,69 @@
           <nav>
             <a class="element-nav-bar" href="meditation.html">Méditation </a>
             <a class="element-nav-bar" href="osteopathie.html">Ostéopathie</a>
-            <a class="element-nav-bar" href="contact.html">Contact </a>
+            <a class="element-nav-bar" href="#footer">Contact </a>
           </nav>
         </header>
         <div class="container-hc-text">
           <h2>Anouchka Peter Krayenbühl</h2>
           <p class="hc-text">Ostéopathe FSO-SVO</p>
         </div>
+        <a href="#main">
+          <i class="fa-solid fa-angle-up fleche-header-container"></i>
+        </a>
       </div>
-      <main></main>
-
-      <footer></footer>
+      <main id="main">
+        <div class="elem-content">
+          <div class="main-osteopathie elem-main">
+            <p class="main-text text-osteopathie">
+              <span class="title title-osteopathie">Ostéopathie</span>
+              <br /><br />
+              <span class="text-hidden">
+                En œuvrant sur la structure du corps physique, en prenant
+                conscience de sa présence et de ses messages, le patient et
+                l’ostéopathe œuvrent ensemble pour l’amélioration de la santé.
+              </span>
+            </p>
+            <a href="osteopathie.html" class="btn btn-osteopathie"
+              >En savoir plus</a
+            >
+          </div>
+          <div class="main-meditation elem-main">
+            <p class="main-text text-meditation">
+              <span class="title title-osteopathie">Méditation</span>
+              <br /><br />
+              <span class="text-hidden">
+                Dans le mouvement incessant de la vie, la recherche de
+                l’équilibre est permanente.
+              </span>
+            </p>
+            <a href="osteopathie.html" class="btn btn-osteopathie"
+              >En savoir plus</a
+            >
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <!-- ft = footer-container -->
+        <div class="ft ft-1">
+          <a class="link-to-top" href="#top">
+            <span class="title">Anouchka Peter Krayenbühl</span>
+          </a>
+        </div>
+        <div class="ft ft-2">
+          <a
+            target="_blank"
+            href="https://www.google.fr/maps/place/Chem.+du+Potat-Dessus+16,+2016+Cortaillod,+Suisse/@46.9418287,6.8358781,17z/data=!3m1!4b1!4m6!3m5!1s0x478de099fd0887db:0xad063d6af4baf2b7!8m2!3d46.9418287!4d6.838453!16s%2Fg%2F11qm6z14vs?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D"
+            >Potat-Dessus 16 2016 Cortaillod</a
+          >
+          <a class="link-footer-2" href="tel:+41 32 841 66 47"
+            >+41 32 841 66 47</a
+          >
+          <a href="mailto:a.krayenbuehl@petersweb.ch"
+            >a.krayenbuehl@petersweb.ch
+          </a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

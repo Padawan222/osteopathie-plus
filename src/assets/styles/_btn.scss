@@ -5,15 +5,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 3rem;
-  margin-top: 5rem;
+  // backdrop-filter: blur(1rem);
   text-decoration: none;
-  background: var(--beige);
   color: white;
   font-size: 1.8rem;
   transition: 1s;
+  z-index: 1;
   &:hover {
-    background: white;
+    width: 18rem;
     font-size: 2rem;
-    color: var(--beige);
+    letter-spacing: 0.1rem;
   }
 }

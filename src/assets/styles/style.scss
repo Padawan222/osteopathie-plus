@@ -15,7 +15,7 @@
 @use "footer" as *;
 @use "animations" as *;
 .container {
-  height: 100vh;
+  height: auto;
   display: grid;
   grid:
     "header" auto

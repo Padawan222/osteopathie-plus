@@ -86,3 +86,23 @@ window.addEventListener("scroll", () => {
     headerContainer.classList.remove("header-container-background-none");
   }
 });
+document.querySelector('.fleche-header-container').addEventListener('click', function(e) {
+  e.preventDefault(); // Empêche le comportement par défaut du lien d'ancre
+
+  // Sélectionner l'élément <main>
+  const mainElement = document.querySelector('main');
+
+  if (mainElement) {
+    // Calculer la position de l'élément <main> par rapport à la fenêtre
+    const targetPosition = mainElement.getBoundingClientRect().top + window.pageYOffset;
+
+    // Calculer l'offset de 8 rem (en pixels)
+    const offset = 4 * parseFloat(getComputedStyle(document.documentElement).fontSize); 
+
+    // Défilement vers la position ajustée
+    window.scrollTo({
+      top: targetPosition - offset,
+      behavior: 'smooth' // Pour un défilement fluide
+    });
+  }
+});

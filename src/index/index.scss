@@ -32,3 +32,98 @@ main {
   font-size: 2rem;
   color: var(--violet);
 }
+.elem-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4rem;
+}
+.elem-main {
+  position: relative;
+  height: 50rem;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 2rem;
+  text-align: center;
+  border-radius: 3rem;
+  overflow: hidden;
+  &:hover::before {
+    filter: brightness(0.5);
+  }
+  &:hover > .main-text > .text-hidden {
+    display: flex;
+    transition: all 1s;
+  }
+  &:hover > .text-osteopathie {
+    margin-bottom: 1rem;
+  }
+  &:hover > .text-meditation {
+    margin-bottom: 1rem;
+  }
+  &:hover > .btn {
+    backdrop-filter: none;
+  }
+}
+
+.elem-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: 3rem;
+  transition: filter 0.5s;
+  z-index: 0;
+}
+
+.main-osteopathie {
+  background: url(../assets/images/goutte-4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.main-meditation {
+  background: url(../assets/images/goutte-6-v2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.main-text {
+  position: relative;
+  width: 60%;
+  color: white;
+  padding: 1rem;
+  border-radius: 3rem;
+  transition: all 1s;
+  z-index: 1;
+  // backdrop-filter: blur(1rem);
+
+  margin: 2rem;
+}
+.text-meditation {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+}
+.text-osteopathie {
+  margin-bottom: 4rem;
+}
+.title-osteopathie {
+  font-size: 4.5rem;
+}
+.text-hidden {
+  display: none;
+  transition: all 1s;
+  animation: anim-text-hidden 2s;
+}
+@keyframes anim-text-hidden {
+  0% {
+    opacity: 0;
+  }
+}
