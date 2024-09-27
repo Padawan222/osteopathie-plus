@@ -9,6 +9,7 @@ header {
   height: 8rem;
   width: 100%;
   animation: anim-start 6s;
+  z-index: 1000;
 }
 .header-background {
   background: url(../images/test-1-capture-decran.png);

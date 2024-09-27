@@ -6,6 +6,7 @@ nav {
   align-items: center;
   margin: 0 2rem;
   animation: opacity 7s;
+
   @include xs {
     height: 8rem;
     width: 100%;
@@ -15,6 +16,7 @@ nav {
     margin: 0 0;
     animation: none;
     animation: menu-responsive 1s;
+    background: var(--beige);
   }
   @include sm {
     height: 8rem;
@@ -26,6 +28,7 @@ nav {
     margin: 0 0;
     animation: none;
     animation: menu-responsive 1s;
+    background: var(--beige);
   }
 }
 .element-nav-bar {

@@ -1,37 +1,14 @@
+@use "../assets/styles/media-queries" as *;
+
 main {
   grid-area: main;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #eee;
 }
 
-.osteopathie-content {
-  height: auto;
-  width: auto;
-  padding: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-  background: white;
-  border-radius: 3rem;
-}
-.osteopathie-container {
-  display: flex;
-  align-items: center;
-}
-.img-main-1 {
-  height: 30rem;
-}
-.text-osteopathie {
-  width: 30rem;
-  margin-left: 5rem;
-  font-size: 2rem;
-  color: var(--violet);
-}
 .elem-content {
   height: 100%;
   width: 100%;
@@ -43,7 +20,8 @@ main {
 }
 .elem-main {
   position: relative;
-  height: 50rem;
+  height: auto;
+  min-height: 30rem;
   width: 92%;
   display: flex;
   flex-direction: column;
@@ -53,6 +31,7 @@ main {
   text-align: center;
   border-radius: 3rem;
   overflow: hidden;
+  padding: 2rem;
   &:hover::before {
     filter: brightness(0.5);
   }
@@ -63,11 +42,15 @@ main {
   &:hover > .text-osteopathie {
     margin-bottom: 1rem;
   }
-  &:hover > .text-meditation {
-    margin-bottom: 1rem;
+  &:hover > .main-text {
+    margin-bottom: 2rem;
   }
   &:hover > .btn {
     backdrop-filter: none;
+    text-decoration: underline;
+  }
+  @include sm {
+    height: auto;
   }
 }
 
@@ -82,6 +65,12 @@ main {
   border-radius: 3rem;
   transition: filter 0.5s;
   z-index: 0;
+  @include sm {
+    filter: brightness(0.5);
+  }
+  @include xs {
+    filter: brightness(0.5);
+  }
 }
 
 .main-osteopathie {
@@ -99,20 +88,22 @@ main {
   position: relative;
   width: 60%;
   color: white;
-  padding: 1rem;
   border-radius: 3rem;
   transition: all 1s;
   z-index: 1;
-  // backdrop-filter: blur(1rem);
-
-  margin: 2rem;
+  text-align: center;
+  margin-bottom: 8rem;
+  @include sm {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  @include xs {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
 }
 .text-meditation {
-  margin-bottom: 4rem;
   font-size: 2rem;
-}
-.text-osteopathie {
-  margin-bottom: 4rem;
 }
 .title-osteopathie {
   font-size: 4.5rem;
@@ -121,6 +112,12 @@ main {
   display: none;
   transition: all 1s;
   animation: anim-text-hidden 2s;
+  @include sm {
+    display: flex;
+  }
+  @include xs {
+    display: flex;
+  }
 }
 @keyframes anim-text-hidden {
   0% {

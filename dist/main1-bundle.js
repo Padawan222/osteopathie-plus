@@ -75,6 +75,7 @@ header {
   height: 8rem;
   width: 100%;
   animation: anim-start 6s;
+  z-index: 1000;
 }
 
 .header-background {
@@ -242,6 +243,7 @@ nav {
     margin: 0 0;
     animation: none;
     animation: menu-responsive 1s;
+    background: var(--beige);
   }
 }
 @media (min-width: 480px) and (max-width: 1099px) {
@@ -255,6 +257,7 @@ nav {
     margin: 0 0;
     animation: none;
     animation: menu-responsive 1s;
+    background: var(--beige);
   }
 }
 
@@ -290,10 +293,21 @@ nav {
   transition: 1s;
   z-index: 1;
 }
+@media (max-width: 480px) {
+  .btn {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  .btn {
+    text-decoration: underline;
+  }
+}
 .btn:hover {
   width: 18rem;
   font-size: 2rem;
   letter-spacing: 0.1rem;
+  cursor: pointer;
 }
 
 footer {
@@ -317,6 +331,12 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 2rem;
+}
+@media (max-width: 480px) {
+  .ft {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 a {
@@ -366,7 +386,7 @@ a {
 .text-anim-start-p2 {
   opacity: 0;
   animation: text-anim-start-p2 3s;
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_header-container.scss","webpack://./src/assets/styles/_menu-responsive.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_btn.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n  scroll-behavior: smooth;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"header\" as *;\r\n@use \"header-container\" as *;\r\n@use \"nav-bar\" as *;\r\n@use \"menu-responsive\" as *;\r\n@use \"menu\" as *;\r\n@use \"btn\" as *;\r\n@use \"footer\" as *;\r\n@use \"animations\" as *;\r\n.container {\r\n  height: auto;\r\n  display: grid;\r\n  grid:\r\n    \"header\" auto\r\n    \"main\" auto\r\n    \"footer\" auto\r\n    / auto;\r\n  background: #eee;\r\n  animation: container-start 3s;\r\n}\r\n.text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  --violet: #5f27cd;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n",".title {\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 3rem;\r\n  letter-spacing: 0.1rem;\r\n  color: white;\r\n}\r\n","@use \"media-queries\" as *;\r\nheader {\r\n  position: fixed;\r\n  top: 0;\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 8rem;\r\n  width: 100%;\r\n  animation: anim-start 6s;\r\n}\r\n.header-background {\r\n  background: url(../images/test-1-capture-decran.png);\r\n  background-size: cover;\r\n}\r\n\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  @include xs {\r\n    margin: 0 1rem;\r\n  }\r\n}\r\n.container-logo-title {\r\n  display: flex;\r\n  animation: opacity 7s;\r\n  text-decoration: none;\r\n}\r\n",".header-container {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-image: url(\"../images/test-1.jpg\");\n  background-size: cover;\n  background-position: center;\n  z-index: 100;\n}\n.header-container-background-none {\n  background: none;\n}\n.container-hc-text {\n  display: flex;\n  flex-direction: column;\n  padding: 3rem;\n  border-radius: 2rem;\n  color: white;\n  text-align: center;\n  backdrop-filter: blur(1rem);\n  margin: 2rem;\n}\nh2 {\n  font-family: var(--ff-title);\n  font-weight: 200;\n  font-size: 4rem;\n  margin-bottom: 2rem;\n}\n.fleche-header-container {\n  width: 5rem;\n  position: absolute;\n  bottom: 3rem;\n  left: calc(50% - 2.5rem);\n  color: white;\n  font-size: 4rem;\n  rotate: 180deg;\n  scroll-behavior: smooth;\n}\n","@use \"media-queries\" as *;\r\n\r\n// btn xs\r\n\r\n.btn-xs {\r\n  display: none;\r\n}\r\n@include xs {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.btn-xs {\r\n  position: absolute;\r\n  right: 0;\r\n  height: 2.5rem;\r\n  width: 3rem;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n  transition: all 2s;\r\n  cursor: pointer;\r\n  margin: 1rem;\r\n  animation: opacity 7s;\r\n}\r\n\r\n.bar {\r\n  height: 2px;\r\n  width: 2.5rem;\r\n  background: white;\r\n  position: absolute;\r\n  transition: all 0.3s;\r\n}\r\n.bar-1 {\r\n  top: 0;\r\n}\r\n.bar-1-active-1 {\r\n  top: calc(50% - 1px);\r\n}\r\n.bar-1-active-2 {\r\n  rotate: 45deg;\r\n}\r\n\r\n.bar-2-active {\r\n  opacity: 0;\r\n}\r\n.bar-3 {\r\n  bottom: 0;\r\n}\r\n.bar-3-active-1 {\r\n  bottom: calc(50% - 1px);\r\n}\r\n.bar-3-active-2 {\r\n  rotate: -45deg;\r\n}\r\n.nav-active-1-xs {\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.nav-active-2-xs {\r\n  transition: 1s;\r\n  transform: translateX(0%);\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nnav {\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    justify-content: space-around;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n  }\r\n}\r\n.element-nav-bar {\r\n  margin: 0 2rem;\r\n  color: white;\r\n  font-size: 2.8rem;\r\n  letter-spacing: 0.1rem;\r\n  font-family: var(--ff-title);\r\n  text-decoration: none;\r\n  transition: all 1s;\r\n  &:hover {\r\n    font-size: 3rem;\r\n    letter-spacing: 0.2rem;\r\n    // color: var(--violet);\r\n  }\r\n\r\n  @include xs {\r\n    margin: 1rem;\r\n  }\r\n}\r\n",".btn {\r\n  height: 5rem;\r\n  width: 15rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 3rem;\r\n  // backdrop-filter: blur(1rem);\r\n  text-decoration: none;\r\n  color: white;\r\n  font-size: 1.8rem;\r\n  transition: 1s;\r\n  z-index: 1;\r\n  &:hover {\r\n    width: 18rem;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.1rem;\r\n  }\r\n}\r\n","footer {\r\n  grid-area: footer;\r\n  height: auto;\r\n  width: 100%;\r\n  padding: 2rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n  text-align: center;\r\n}\r\n.ft {\r\n  height: auto;\r\n  width: 80%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 2rem;\r\n}\r\na {\r\n  font-style: italic;\r\n  color: white;\r\n}\r\n.link-footer-2 {\r\n  margin: 0 2rem;\r\n}\r\n.link-to-top {\r\n  text-decoration: none;\r\n}\r\n","// @keyframes anim-start {\r\n//   0% {\r\n//     height: 50%;\r\n//   }\r\n//   50% {\r\n//     height: 50%;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p1 {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p2 {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   55% {\r\n//     opacity: 0;\r\n//   }\r\n//   56% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes opacity {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   80% {\r\n//     opacity: 0;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes container-start {\r\n//   0% {\r\n//     background: var(--beige);\r\n//   }\r\n//   100% {\r\n//     background: var(--beige);\r\n//   }\r\n// }\r\n@keyframes menu-responsive {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_header.scss","webpack://./src/assets/styles/_header-container.scss","webpack://./src/assets/styles/_menu-responsive.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_btn.scss","webpack://./src/assets/styles/_footer.scss","webpack://./src/assets/styles/_animations.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n  scroll-behavior: smooth;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"header\" as *;\r\n@use \"header-container\" as *;\r\n@use \"nav-bar\" as *;\r\n@use \"menu-responsive\" as *;\r\n@use \"menu\" as *;\r\n@use \"btn\" as *;\r\n@use \"footer\" as *;\r\n@use \"animations\" as *;\r\n.container {\r\n  height: auto;\r\n  display: grid;\r\n  grid:\r\n    \"header\" auto\r\n    \"main\" auto\r\n    \"footer\" auto\r\n    / auto;\r\n  background: #eee;\r\n  animation: container-start 3s;\r\n}\r\n.text-anim-start {\r\n  opacity: 0;\r\n  height: 7.5rem;\r\n  text-align: center;\r\n  background: var(--beige);\r\n  color: white;\r\n  font-size: 6rem;\r\n  font-family: var(--ff-title);\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  animation: text-anim-start 3s;\r\n}\r\n.text-anim-start-p1 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p1 1.5s;\r\n}\r\n.text-anim-start-p2 {\r\n  opacity: 0;\r\n  animation: text-anim-start-p2 3s;\r\n}\r\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  //color\r\n  --beige: #d5c2a1;\r\n  --violet: #5f27cd;\r\n  // font family\r\n  --font-family: \"Nunito\", sans-serif;\r\n  --ff-title: \"Great Vibes\", cursive;\r\n}\r\n",".title {\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 3rem;\r\n  letter-spacing: 0.1rem;\r\n  color: white;\r\n}\r\n","@use \"media-queries\" as *;\r\nheader {\r\n  position: fixed;\r\n  top: 0;\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 8rem;\r\n  width: 100%;\r\n  animation: anim-start 6s;\r\n  z-index: 1000;\r\n}\r\n.header-background {\r\n  background: url(../images/test-1-capture-decran.png);\r\n  background-size: cover;\r\n}\r\n\r\nh1 {\r\n  margin-top: 1rem;\r\n  color: white;\r\n  font-family: var(--ff-title);\r\n  font-weight: 200;\r\n  font-size: 4rem;\r\n}\r\n.img-header {\r\n  height: 6rem;\r\n  margin: 0 2rem;\r\n  @include xs {\r\n    margin: 0 1rem;\r\n  }\r\n}\r\n.container-logo-title {\r\n  display: flex;\r\n  animation: opacity 7s;\r\n  text-decoration: none;\r\n}\r\n",".header-container {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-image: url(\"../images/test-1.jpg\");\n  background-size: cover;\n  background-position: center;\n  z-index: 100;\n}\n.header-container-background-none {\n  background: none;\n}\n.container-hc-text {\n  display: flex;\n  flex-direction: column;\n  padding: 3rem;\n  border-radius: 2rem;\n  color: white;\n  text-align: center;\n  backdrop-filter: blur(1rem);\n  margin: 2rem;\n}\nh2 {\n  font-family: var(--ff-title);\n  font-weight: 200;\n  font-size: 4rem;\n  margin-bottom: 2rem;\n}\n.fleche-header-container {\n  width: 5rem;\n  position: absolute;\n  bottom: 3rem;\n  left: calc(50% - 2.5rem);\n  color: white;\n  font-size: 4rem;\n  rotate: 180deg;\n  scroll-behavior: smooth;\n}\n","@use \"media-queries\" as *;\r\n\r\n// btn xs\r\n\r\n.btn-xs {\r\n  display: none;\r\n}\r\n@include xs {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .btn-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.btn-xs {\r\n  position: absolute;\r\n  right: 0;\r\n  height: 2.5rem;\r\n  width: 3rem;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n  transition: all 2s;\r\n  cursor: pointer;\r\n  margin: 1rem;\r\n  animation: opacity 7s;\r\n}\r\n\r\n.bar {\r\n  height: 2px;\r\n  width: 2.5rem;\r\n  background: white;\r\n  position: absolute;\r\n  transition: all 0.3s;\r\n}\r\n.bar-1 {\r\n  top: 0;\r\n}\r\n.bar-1-active-1 {\r\n  top: calc(50% - 1px);\r\n}\r\n.bar-1-active-2 {\r\n  rotate: 45deg;\r\n}\r\n\r\n.bar-2-active {\r\n  opacity: 0;\r\n}\r\n.bar-3 {\r\n  bottom: 0;\r\n}\r\n.bar-3-active-1 {\r\n  bottom: calc(50% - 1px);\r\n}\r\n.bar-3-active-2 {\r\n  rotate: -45deg;\r\n}\r\n.nav-active-1-xs {\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.nav-active-2-xs {\r\n  transition: 1s;\r\n  transform: translateX(0%);\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nnav {\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 2rem;\r\n  animation: opacity 7s;\r\n\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n    background: var(--beige);\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 100%;\r\n    display: none;\r\n    justify-content: space-around;\r\n    position: absolute;\r\n    top: 8rem;\r\n    margin: 0 0;\r\n    animation: none;\r\n    animation: menu-responsive 1s;\r\n    background: var(--beige);\r\n  }\r\n}\r\n.element-nav-bar {\r\n  margin: 0 2rem;\r\n  color: white;\r\n  font-size: 2.8rem;\r\n  letter-spacing: 0.1rem;\r\n  font-family: var(--ff-title);\r\n  text-decoration: none;\r\n  transition: all 1s;\r\n  &:hover {\r\n    font-size: 3rem;\r\n    letter-spacing: 0.2rem;\r\n    // color: var(--violet);\r\n  }\r\n\r\n  @include xs {\r\n    margin: 1rem;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n.btn {\r\n  height: 5rem;\r\n  width: 15rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 3rem;\r\n  // backdrop-filter: blur(1rem);\r\n  text-decoration: none;\r\n  color: white;\r\n  font-size: 1.8rem;\r\n  transition: 1s;\r\n  z-index: 1;\r\n  @include xs {\r\n    text-decoration: underline;\r\n  }\r\n  @include sm {\r\n    text-decoration: underline;\r\n  }\r\n  &:hover {\r\n    width: 18rem;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.1rem;\r\n    cursor: pointer;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\nfooter {\r\n  grid-area: footer;\r\n  height: auto;\r\n  width: 100%;\r\n  padding: 2rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: var(--beige);\r\n  animation: anim-start 6s;\r\n  text-align: center;\r\n}\r\n.ft {\r\n  height: auto;\r\n  width: 80%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 2rem;\r\n  @include xs {\r\n    width: 100%;\r\n    flex-direction: column;\r\n  }\r\n}\r\na {\r\n  font-style: italic;\r\n  color: white;\r\n}\r\n.link-footer-2 {\r\n  margin: 0 2rem;\r\n}\r\n.link-to-top {\r\n  text-decoration: none;\r\n}\r\n","// @keyframes anim-start {\r\n//   0% {\r\n//     height: 50%;\r\n//   }\r\n//   50% {\r\n//     height: 50%;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p1 {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start-p2 {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   55% {\r\n//     opacity: 0;\r\n//   }\r\n//   56% {\r\n//     opacity: 1;\r\n//   }\r\n//   80% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 0;\r\n//   }\r\n// }\r\n// @keyframes text-anim-start {\r\n//   0% {\r\n//     opacity: 1;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes opacity {\r\n//   0% {\r\n//     opacity: 0;\r\n//   }\r\n//   80% {\r\n//     opacity: 0;\r\n//   }\r\n//   100% {\r\n//     opacity: 1;\r\n//   }\r\n// }\r\n// @keyframes container-start {\r\n//   0% {\r\n//     background: var(--beige);\r\n//   }\r\n//   100% {\r\n//     background: var(--beige);\r\n//   }\r\n// }\r\n@keyframes menu-responsive {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -399,42 +419,17 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `main {
+___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
+main {
   grid-area: main;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #eee;
-}
-
-.osteopathie-content {
-  height: auto;
-  width: auto;
-  padding: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-  background: white;
-  border-radius: 3rem;
-}
-
-.osteopathie-container {
-  display: flex;
-  align-items: center;
-}
-
-.img-main-1 {
-  height: 30rem;
-}
-
-.text-osteopathie {
-  width: 30rem;
-  margin-left: 5rem;
-  font-size: 2rem;
-  color: var(--violet);
 }
 
 .elem-content {
@@ -449,7 +444,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
 
 .elem-main {
   position: relative;
-  height: 50rem;
+  height: auto;
+  min-height: 30rem;
   width: 92%;
   display: flex;
   flex-direction: column;
@@ -459,6 +455,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
   text-align: center;
   border-radius: 3rem;
   overflow: hidden;
+  padding: 2rem;
 }
 .elem-main:hover::before {
   filter: brightness(0.5);
@@ -470,11 +467,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
 .elem-main:hover > .text-osteopathie {
   margin-bottom: 1rem;
 }
-.elem-main:hover > .text-meditation {
-  margin-bottom: 1rem;
+.elem-main:hover > .main-text {
+  margin-bottom: 2rem;
 }
 .elem-main:hover > .btn {
   backdrop-filter: none;
+  text-decoration: underline;
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  .elem-main {
+    height: auto;
+  }
 }
 
 .elem-main::before {
@@ -488,6 +491,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
   border-radius: 3rem;
   transition: filter 0.5s;
   z-index: 0;
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  .elem-main::before {
+    filter: brightness(0.5);
+  }
+}
+@media (max-width: 480px) {
+  .elem-main::before {
+    filter: brightness(0.5);
+  }
 }
 
 .main-osteopathie {
@@ -506,20 +519,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
   position: relative;
   width: 60%;
   color: white;
-  padding: 1rem;
   border-radius: 3rem;
   transition: all 1s;
   z-index: 1;
-  margin: 2rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+@media (min-width: 480px) and (max-width: 1099px) {
+  .main-text {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .main-text {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
 }
 
 .text-meditation {
-  margin-bottom: 4rem;
   font-size: 2rem;
-}
-
-.text-osteopathie {
-  margin-bottom: 4rem;
 }
 
 .title-osteopathie {
@@ -531,12 +551,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `main {
   transition: all 1s;
   animation: anim-text-hidden 2s;
 }
+@media (min-width: 480px) and (max-width: 1099px) {
+  .text-hidden {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .text-hidden {
+    display: flex;
+  }
+}
 
 @keyframes anim-text-hidden {
   0% {
     opacity: 0;
   }
-}`, "",{"version":3,"sources":["webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;AACF;;AAEA;EACE,YAAA;EACA,WAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,6BAAA;EACA,iBAAA;EACA,mBAAA;AACF;;AACA;EACE,aAAA;EACA,mBAAA;AAEF;;AAAA;EACE,aAAA;AAGF;;AADA;EACE,YAAA;EACA,iBAAA;EACA,eAAA;EACA,oBAAA;AAIF;;AAFA;EACE,YAAA;EACA,WAAA;EACA,aAAA;EACA,mBAAA;EACA,sBAAA;EACA,6BAAA;EACA,aAAA;AAKF;;AAHA;EACE,kBAAA;EACA,aAAA;EACA,UAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,gBAAA;AAMF;AALE;EACE,uBAAA;AAOJ;AALE;EACE,aAAA;EACA,kBAAA;AAOJ;AALE;EACE,mBAAA;AAOJ;AALE;EACE,mBAAA;AAOJ;AALE;EACE,qBAAA;AAOJ;;AAHA;EACE,WAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,mBAAA;EACA,mBAAA;EACA,uBAAA;EACA,UAAA;AAMF;;AAHA;EACE,mDAAA;EACA,sBAAA;EACA,2BAAA;AAMF;;AAJA;EACE,mDAAA;EACA,sBAAA;EACA,2BAAA;AAOF;;AAJA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,UAAA;EAGA,YAAA;AAKF;;AAHA;EACE,mBAAA;EACA,eAAA;AAMF;;AAJA;EACE,mBAAA;AAOF;;AALA;EACE,iBAAA;AAQF;;AANA;EACE,aAAA;EACA,kBAAA;EACA,8BAAA;AASF;;AAPA;EACE;IACE,UAAA;EAUF;AACF","sourcesContent":["main {\r\n  grid-area: main;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background: #eee;\r\n}\r\n\r\n.osteopathie-content {\r\n  height: auto;\r\n  width: auto;\r\n  padding: 5rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  justify-content: space-evenly;\r\n  background: white;\r\n  border-radius: 3rem;\r\n}\r\n.osteopathie-container {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.img-main-1 {\r\n  height: 30rem;\r\n}\r\n.text-osteopathie {\r\n  width: 30rem;\r\n  margin-left: 5rem;\r\n  font-size: 2rem;\r\n  color: var(--violet);\r\n}\r\n.elem-content {\r\n  height: 100%;\r\n  width: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  padding: 4rem;\r\n}\r\n.elem-main {\r\n  position: relative;\r\n  height: 50rem;\r\n  width: 92%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin: 4rem 2rem;\r\n  text-align: center;\r\n  border-radius: 3rem;\r\n  overflow: hidden;\r\n  &:hover::before {\r\n    filter: brightness(0.5);\r\n  }\r\n  &:hover > .main-text > .text-hidden {\r\n    display: flex;\r\n    transition: all 1s;\r\n  }\r\n  &:hover > .text-osteopathie {\r\n    margin-bottom: 1rem;\r\n  }\r\n  &:hover > .text-meditation {\r\n    margin-bottom: 1rem;\r\n  }\r\n  &:hover > .btn {\r\n    backdrop-filter: none;\r\n  }\r\n}\r\n\r\n.elem-main::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background: inherit;\r\n  border-radius: 3rem;\r\n  transition: filter 0.5s;\r\n  z-index: 0;\r\n}\r\n\r\n.main-osteopathie {\r\n  background: url(../assets/images/goutte-4.jpg);\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n.main-meditation {\r\n  background: url(../assets/images/goutte-6-v2.png);\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n\r\n.main-text {\r\n  position: relative;\r\n  width: 60%;\r\n  color: white;\r\n  padding: 1rem;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: 1;\r\n  // backdrop-filter: blur(1rem);\r\n\r\n  margin: 2rem;\r\n}\r\n.text-meditation {\r\n  margin-bottom: 4rem;\r\n  font-size: 2rem;\r\n}\r\n.text-osteopathie {\r\n  margin-bottom: 4rem;\r\n}\r\n.title-osteopathie {\r\n  font-size: 4.5rem;\r\n}\r\n.text-hidden {\r\n  display: none;\r\n  transition: all 1s;\r\n  animation: anim-text-hidden 2s;\r\n}\r\n@keyframes anim-text-hidden {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_media-queries.scss","webpack://./src/index/index.scss"],"names":[],"mappings":"AAAA,8BAAA;AAMA,uCAAA;AAMA,6CAAA;AAMA,kBAAA;AChBA;EACE,eAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;AAGF;;AAAA;EACE,YAAA;EACA,WAAA;EACA,aAAA;EACA,mBAAA;EACA,sBAAA;EACA,6BAAA;EACA,aAAA;AAGF;;AADA;EACE,kBAAA;EACA,YAAA;EACA,iBAAA;EACA,UAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,gBAAA;EACA,aAAA;AAIF;AAHE;EACE,uBAAA;AAKJ;AAHE;EACE,aAAA;EACA,kBAAA;AAKJ;AAHE;EACE,mBAAA;AAKJ;AAHE;EACE,mBAAA;AAKJ;AAHE;EACE,qBAAA;EACA,0BAAA;AAKJ;AD9CE;ECYF;IAgCI,YAAA;EAMF;AACF;;AAHA;EACE,WAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,mBAAA;EACA,mBAAA;EACA,uBAAA;EACA,UAAA;AAMF;ADhEE;ECgDF;IAYI,uBAAA;EAQF;AACF;AD3EE;ECsDF;IAeI,uBAAA;EAUF;AACF;;AAPA;EACE,mDAAA;EACA,sBAAA;EACA,2BAAA;AAUF;;AARA;EACE,mDAAA;EACA,sBAAA;EACA,2BAAA;AAWF;;AARA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,UAAA;EACA,kBAAA;EACA,mBAAA;AAWF;ADjGE;EC8EF;IAUI,mBAAA;IACA,WAAA;EAaF;AACF;AD7GE;ECoFF;IAcI,mBAAA;IACA,WAAA;EAeF;AACF;;AAbA;EACE,eAAA;AAgBF;;AAdA;EACE,iBAAA;AAiBF;;AAfA;EACE,aAAA;EACA,kBAAA;EACA,8BAAA;AAkBF;AD3HE;ECsGF;IAKI,aAAA;EAoBF;AACF;ADtIE;EC4GF;IAQI,aAAA;EAsBF;AACF;;AApBA;EACE;IACE,UAAA;EAuBF;AACF","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 1099px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 1100px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"../assets/styles/media-queries\" as *;\r\n\r\nmain {\r\n  grid-area: main;\r\n  height: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background: #eee;\r\n}\r\n\r\n.elem-content {\r\n  height: 100%;\r\n  width: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  padding: 4rem;\r\n}\r\n.elem-main {\r\n  position: relative;\r\n  height: auto;\r\n  min-height: 30rem;\r\n  width: 92%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin: 4rem 2rem;\r\n  text-align: center;\r\n  border-radius: 3rem;\r\n  overflow: hidden;\r\n  padding: 2rem;\r\n  &:hover::before {\r\n    filter: brightness(0.5);\r\n  }\r\n  &:hover > .main-text > .text-hidden {\r\n    display: flex;\r\n    transition: all 1s;\r\n  }\r\n  &:hover > .text-osteopathie {\r\n    margin-bottom: 1rem;\r\n  }\r\n  &:hover > .main-text {\r\n    margin-bottom: 2rem;\r\n  }\r\n  &:hover > .btn {\r\n    backdrop-filter: none;\r\n    text-decoration: underline;\r\n  }\r\n  @include sm {\r\n    height: auto;\r\n  }\r\n}\r\n\r\n.elem-main::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background: inherit;\r\n  border-radius: 3rem;\r\n  transition: filter 0.5s;\r\n  z-index: 0;\r\n  @include sm {\r\n    filter: brightness(0.5);\r\n  }\r\n  @include xs {\r\n    filter: brightness(0.5);\r\n  }\r\n}\r\n\r\n.main-osteopathie {\r\n  background: url(../assets/images/goutte-4.jpg);\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n.main-meditation {\r\n  background: url(../assets/images/goutte-6-v2.png);\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n\r\n.main-text {\r\n  position: relative;\r\n  width: 60%;\r\n  color: white;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: 1;\r\n  text-align: center;\r\n  margin-bottom: 8rem;\r\n  @include sm {\r\n    margin-bottom: 2rem;\r\n    width: 100%;\r\n  }\r\n  @include xs {\r\n    margin-bottom: 2rem;\r\n    width: 100%;\r\n  }\r\n}\r\n.text-meditation {\r\n  font-size: 2rem;\r\n}\r\n.title-osteopathie {\r\n  font-size: 4.5rem;\r\n}\r\n.text-hidden {\r\n  display: none;\r\n  transition: all 1s;\r\n  animation: anim-text-hidden 2s;\r\n  @include sm {\r\n    display: flex;\r\n  }\r\n  @include xs {\r\n    display: flex;\r\n  }\r\n}\r\n@keyframes anim-text-hidden {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
