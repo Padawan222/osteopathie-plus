@@ -5,12 +5,19 @@ nav {
   display: flex;
   align-items: center;
   margin: 0 2rem;
-  animation: opacity 7s;
+  // animation: opacity 7s;
+  animation: 3s menu-anim;
+  @keyframes menu-anim {
+    0% {
+      transform: translateY(-120%);
+    }
+  }
 
   @include xs {
-    height: 8rem;
+    height: auto;
     width: 100%;
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 8rem;
     margin: 0 0;
@@ -33,12 +40,12 @@ nav {
 }
 .element-nav-bar {
   margin: 0 2rem;
-  color: white;
+  color: #eee;
   font-size: 2.8rem;
   letter-spacing: 0.1rem;
   font-family: var(--ff-title);
   text-decoration: none;
-  transition: all 1s;
+  transition: 1s;
   &:hover {
     font-size: 3rem;
     letter-spacing: 0.2rem;

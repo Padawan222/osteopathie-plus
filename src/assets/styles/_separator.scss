@@ -1,0 +1,31 @@
+@use "media-queries" as *;
+
+// .separator-xs-1 {
+//   display: none;
+//   height: 1px;
+//   width: 80%;
+//   background: white;
+//   margin: 2rem;
+//   @include xs {
+//     display: flex;
+//   }
+// }
+.separator-xs-2 {
+  display: none;
+  height: 1px;
+  width: 60%;
+  background: white;
+  margin: 2rem;
+  @include xs {
+    display: flex;
+  }
+  @include sm {
+    display: flex;
+  }
+}
+.separator-2 {
+  height: 1px;
+  width: 80%;
+  background: white;
+  margin: 2rem;
+}

@@ -13,25 +13,85 @@ footer {
   animation: anim-start 6s;
   text-align: center;
 }
-.ft {
+.footer-content {
   height: auto;
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 2rem;
   @include xs {
-    width: 100%;
+    flex-direction: column;
+  }
+  @include sm {
     flex-direction: column;
   }
 }
+.ft {
+  height: auto;
+  width: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 a {
   font-style: italic;
-  color: white;
+  color: var(--bordeaux);
 }
-.link-footer-2 {
-  margin: 0 2rem;
+
+.link-page {
+  transition: all 1s;
+
+  &:hover {
+    width: 22rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+  }
 }
-.link-to-top {
+h5 {
+  display: flex;
+  align-items: center;
+  color: var(--bordeaux);
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+.link-h5 {
+  font-family: var(--ff-title);
+  font-style: none;
   text-decoration: none;
+  font-weight: 200;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  margin-left: 0.5rem;
+  color: var(--bordeaux);
+}
+.title-footer {
+  color: var(--bordeaux);
+}
+.img-footer {
+  height: 8rem;
+  margin: 0 2rem;
+  @include xs {
+    margin: 0 1rem;
+  }
+}
+.ft-logo {
+  @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+}
+.ft-logo-xs {
+  display: none;
+  @include xs {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  @include sm {
+    display: flex;
+    margin-bottom: 2rem;
+  }
 }

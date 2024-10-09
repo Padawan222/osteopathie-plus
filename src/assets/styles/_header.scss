@@ -18,7 +18,7 @@ header {
 
 h1 {
   margin-top: 1rem;
-  color: white;
+  color: #eee;
   font-family: var(--ff-title);
   font-weight: 200;
   font-size: 4rem;
@@ -34,4 +34,10 @@ h1 {
   display: flex;
   animation: opacity 7s;
   text-decoration: none;
+  animation: 3s logo-header;
+  @keyframes logo-header {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
 }

@@ -10,6 +10,8 @@ module.exports = {
     main2: path.join(__dirname, "src/index/contact/contact.js"),
     main3: path.join(__dirname, "src/index/meditation/meditation.js"),
     main4: path.join(__dirname, "src/index/osteopathie/osteopathie.js"),
+    main5: path.join(__dirname, "src/index/medecine-rythmique/medecine-rythmique.js"),
+    main6: path.join(__dirname, "src/index/qui-suis-je/qui-suis-je.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -55,6 +57,16 @@ module.exports = {
       filename: "osteopathie.html",
       template: "./src/index/osteopathie/osteopathie.html",
       chunks: ["main4"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "medecine-rythmique.html",
+      template: "./src/index/medecine-rythmique/medecine-rythmique.html",
+      chunks: ["main5"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "qui-suis-je.html",
+      template: "./src/index/qui-suis-je/qui-suis-je.html",
+      chunks: ["main6"],
     }),
     new CopyWebpackPlugin({
       patterns: [
