@@ -7,8 +7,88 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/images/test-2.jpg ");
+  background-image: url("../../assets/images/lac-2.jpg");
   background-size: cover;
   background-position: center;
   z-index: 100;
+}
+.header-background {
+  background: url(../../assets/images/lac-2-v2.png);
+  background-size: cover;
+}
+.main-content {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  text-align: center;
+  @include xs {
+    padding: 1rem;
+  }
+}
+
+.modalite-container {
+  height: 5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  transition: 2s all;
+  border-radius: 3rem;
+  @include xs {
+    height: 40rem;
+    background: white;
+  }
+  @include sm {
+    height: 35rem;
+    background: white;
+  }
+  &:hover {
+    height: 30rem;
+    background: white;
+  }
+  &:hover > .span-modalite {
+    display: flex;
+  }
+}
+h3 {
+  font-family: var(--ff-title);
+  font-weight: 200;
+  font-size: 4rem;
+  color: var(--bordeaux);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.span-modalite {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 2s all;
+  color: transparent;
+  @include xs {
+    display: flex;
+    color: var(--bordeaux);
+  }
+  @include sm {
+    display: flex;
+    color: var(--bordeaux);
+  }
+}
+.style-text-osteo {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.style-text-osteo-active {
+  color: var(--bordeaux);
+}
+.osteo-text-container {
+  margin: 2rem;
+  width: 80%;
+}
+.osteo-text {
+  font-size: 2rem;
 }

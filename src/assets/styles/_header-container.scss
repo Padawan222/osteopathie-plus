@@ -49,7 +49,6 @@ h2 {
   rotate: 180deg;
   scroll-behavior: smooth;
   animation: 3s fleche-hc;
-
   &:hover {
     transition: 2s;
     color: var(--bordeaux);
@@ -59,6 +58,14 @@ h2 {
       transform: translateY(-150%);
     }
   }
+}
+.fleche-header-container-anim {
+  transition: all 1s;
+  opacity: 0;
+}
+.fleche-header-container-anim-2 {
+  transition: all 1s;
+  opacity: 1;
 }
 .hc-text {
   color: #eee;

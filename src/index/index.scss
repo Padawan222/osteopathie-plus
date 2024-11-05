@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/images/test-1.jpg");
+  background-image: url("../assets/images/lac-1.jpg");
   background-size: cover;
   background-position: center;
   z-index: 100;
@@ -19,6 +19,10 @@
       filter: brightness(0.3);
     }
   }
+}
+.header-background {
+  background: url("../assets/images/lac-1-v2.png");
+  background-size: cover;
 }
 main {
   grid-area: main;
@@ -94,19 +98,32 @@ main {
 }
 
 .main-osteopathie {
-  background: url(../assets/images/leve-de-soleil-2.png);
+  background: url(../assets/images/lac-2.jpg);
   background-size: cover;
   background-position: center;
 }
 .main-meditation {
-  background: url(../assets/images/goutte-6-v2.png);
+  background: url(../assets/images/lac-3.jpeg);
   background-size: cover;
   background-position: center;
+  animation: 5ms test;
+  @keyframes test {
+    0% {
+      transform: translateY(-127%);
+    }
+  }
 }
 .main-medecine-rythmique {
-  background: url(../assets/images/goutte-7-v3.png);
+  background: url(../assets/images/lac-4.jpeg);
   background-size: cover;
   background-position: center;
+
+  animation: 5ms test-2;
+  @keyframes test-2 {
+    0% {
+      transform: translateY(-227%);
+    }
+  }
 }
 
 .main-text {
@@ -142,8 +159,10 @@ main {
 }
 .text-hidden {
   display: none;
+  justify-content: center;
   transition: all 1s;
   animation: anim-text-hidden 2s;
+
   @include sm {
     display: flex;
   }
@@ -155,4 +174,7 @@ main {
   0% {
     opacity: 0;
   }
+}
+.main-link {
+  text-decoration: none;
 }
