@@ -10,6 +10,21 @@
 //     display: flex;
 //   }
 // }
+.separator-1 {
+  display: none;
+  height: 2px;
+  width: 80%;
+  background: #eee;
+  animation: separator-1-anim 2s;
+  @keyframes separator-1-anim {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}
+.separator-1-active {
+  display: flex;
+}
 .separator-xs-2 {
   display: none;
   height: 1px;
