@@ -14,7 +14,13 @@
   margin: 2rem;
   animation: 5s hc-text;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  // animation-delay: 3s;
+  margin-bottom: 25rem;
+  @include xs {
+    margin-bottom: 2rem;
+  }
+  @include sm {
+    margin-bottom: 2rem;
+  }
   @keyframes hc-text {
     0% {
       transform: scaleY(0%);
@@ -35,9 +41,12 @@
 h2 {
   font-family: var(--ff-title);
   font-weight: 200;
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   color: var(--bordeaux);
+  @include xs {
+    font-size: 4rem;
+  }
 }
 .fleche-header-container {
   width: 5rem;
@@ -69,6 +78,10 @@ h2 {
 }
 .hc-text {
   color: #eee;
+  font-size: 2rem;
+  @include xs {
+    font-size: 1.6rem;
+  }
 }
 // .container-link-hc {
 //   height: auto;

@@ -10,6 +10,8 @@ header {
   width: 100%;
   animation: anim-start 6s;
   z-index: 1000;
+  backdrop-filter: brightness(0.8);
+
   // background: var(--beige);s
 }
 

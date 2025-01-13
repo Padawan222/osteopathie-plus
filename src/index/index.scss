@@ -64,7 +64,7 @@ main {
     transition: all 1s;
   }
   &:hover > .text-osteopathie {
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
   &:hover > .main-text {
     margin-bottom: 2rem;
@@ -134,7 +134,7 @@ main {
   transition: all 1s;
   z-index: 1;
   text-align: center;
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
   @include sm {
     margin-bottom: 2rem;
     width: 100%;
