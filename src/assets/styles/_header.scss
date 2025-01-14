@@ -10,9 +10,12 @@ header {
   width: 100%;
   animation: anim-start 6s;
   z-index: 1000;
-  backdrop-filter: brightness(0.8);
-
-  // background: var(--beige);s
+  // background: var(--beige);
+  background: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.header-active-1 {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 h1 {

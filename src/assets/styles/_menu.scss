@@ -23,7 +23,7 @@ nav {
     margin: 0 0;
     animation: none;
     animation: menu-responsive 1s;
-    background: var(--beige);
+    background: rgba(0, 0, 0, 0.8);
   }
   @include sm {
     height: 8rem;
@@ -36,11 +36,12 @@ nav {
     animation: none;
     animation: menu-responsive 1s;
     background: var(--beige);
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 .element-nav-bar {
   margin: 0 2rem;
-  color: var(--bordeaux);
+  color: #eee;
   font-size: 2.8rem;
   letter-spacing: 0.1rem;
   font-family: var(--ff-title);
