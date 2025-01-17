@@ -20,6 +20,7 @@ btn.addEventListener("click", () => {
       bar2.classList.remove("bar-2-active");
       bar3.classList.remove("bar-3-active-1");
       nav.classList.add("nav-active-1-xs");
+      header.classList.remove('header-active-1')
     }, 300);
     setTimeout(() => {
       nav.style.display = "none";
@@ -33,6 +34,7 @@ btn.addEventListener("click", () => {
       bar1.classList.add("bar-1-active-2");
       bar3.classList.add("bar-3-active-2");
       nav.style.display = "flex";
+      header.classList.add('header-active-1')
     }, 300);
   }
 });
@@ -114,7 +116,7 @@ window.addEventListener("scroll", () => {
   const topElementToTopViewport = textHc.getBoundingClientRect().top + scrollTop; // Position de textHc par rapport au document
 
   // Vérifie si textHc a atteint 8 rem du haut de la page
-  if (topElementToTopViewport <= scrollTop + remToPixels2(20)) {
+  if (topElementToTopViewport <= scrollTop + remToPixels2(10)) {
     flecheHC.classList.add("fleche-header-container-anim");
     flecheHC.classList.remove("fleche-header-container-anim-2");
   } else {
