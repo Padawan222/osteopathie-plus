@@ -19,6 +19,9 @@
 .link-rdv {
   margin-top: 10rem;
   animation: link-rdv-anim 4s;
+  @include xs {
+    margin-bottom: 8rem;
+  }
   @keyframes link-rdv-anim {
     0% {
       opacity: 0;
