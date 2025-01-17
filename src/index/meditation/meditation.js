@@ -20,6 +20,7 @@ btn.addEventListener("click", () => {
       bar2.classList.remove("bar-2-active");
       bar3.classList.remove("bar-3-active-1");
       nav.classList.add("nav-active-1-xs");
+      header.classList.remove('header-active-1')
     }, 300);
     setTimeout(() => {
       nav.style.display = "none";
@@ -33,27 +34,20 @@ btn.addEventListener("click", () => {
       bar1.classList.add("bar-1-active-2");
       bar3.classList.add("bar-3-active-2");
       nav.style.display = "flex";
+      header.classList.add('header-active-1')
     }, 300);
   }
 });
 // header
-
 const headerContainer = document.querySelector(".header-container");
 const header = document.querySelector("header");
-
-
 const remToPixels = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
   
-
   const bottomElementToTopViewport = headerContainer.getBoundingClientRect().bottom;
   
-
   const stopScrollDistance = remToPixels(8);
-
-
   if (bottomElementToTopViewport <= stopScrollDistance) {
     header.classList.add("header-background");
     headerContainer.classList.add("header-container-background-none");
@@ -65,36 +59,24 @@ window.addEventListener("scroll", () => {
 // header fleche 
 document.querySelector('.fleche-header-container').addEventListener('click', function(e) {
   e.preventDefault(); 
-
-
   const mainElement = document.querySelector('main');
-
   if (mainElement) {
-
     const targetPosition = mainElement.getBoundingClientRect().top + window.pageYOffset;
-
-
     const offset = 4 * parseFloat(getComputedStyle(document.documentElement).fontSize); 
-
-
     window.scrollTo({
       top: targetPosition - offset,
       behavior: 'smooth' 
     });
   }
 });
-
 // hc text
 const textHc = document.querySelector(".container-hc-text");
-
 // Fonction pour convertir rem en pixels
 const remToPixels2 = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-
 // Écouteur d'événement pour le défilement
 window.addEventListener("scroll", () => {
   const { scrollTop } = document.documentElement;
   const topElementToTopViewport = textHc.getBoundingClientRect().top + scrollTop; // Position de textHc par rapport au document
-
   // Vérifie si textHc a atteint 8 rem du haut de la page
   if (topElementToTopViewport <= scrollTop + remToPixels2(20)) {
     textHc.classList.add("container-hc-text-anim");
@@ -106,15 +88,12 @@ window.addEventListener("scroll", () => {
 });
 // hc fleche
 const flecheHC = document.querySelector(".fleche-header-container");
-
-
 // Écouteur d'événement pour le défilement
 window.addEventListener("scroll", () => {
   const { scrollTop } = document.documentElement;
   const topElementToTopViewport = textHc.getBoundingClientRect().top + scrollTop; // Position de textHc par rapport au document
-
   // Vérifie si textHc a atteint 8 rem du haut de la page
-  if (topElementToTopViewport <= scrollTop + remToPixels2(20)) {
+  if (topElementToTopViewport <= scrollTop + remToPixels2(10)) {
     flecheHC.classList.add("fleche-header-container-anim");
     flecheHC.classList.remove("fleche-header-container-anim-2");
   } else {
@@ -122,26 +101,19 @@ window.addEventListener("scroll", () => {
     flecheHC.classList.remove("fleche-header-container-anim");
   }
 });
-
 // span modalite
-
 const modaliteContainer = document.querySelector(".modalite-container")
 const spanModalite = document.querySelector(".span-modalite")
 const propositionContainer = document.querySelector('.proposition-container')
 const separator1 = document.querySelector('.separator-1')
-
 let timeoutId;
-
 modaliteContainer.addEventListener("mouseover", () => {
     propositionContainer.classList.add('proposition-container-active')
     spanModalite.style.display="flex" 
     // separator1.classList.add("separator-1-active")
-
 });
-
 modaliteContainer.addEventListener("mouseleave", () => {
   propositionContainer.classList.remove('proposition-container-active')
   spanModalite.style.display="none"
 //   separator1.classList.remove("separator-1-active")
-
 });

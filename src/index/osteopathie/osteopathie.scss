@@ -16,6 +16,30 @@
   background: url(../../assets/images/lac-2-v2.png);
   background-size: cover;
 }
+.link-rdv {
+  margin-top: 10rem;
+  animation: link-rdv-anim 4s;
+  @keyframes link-rdv-anim {
+    0% {
+      opacity: 0;
+    }
+  }
+  a {
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--ff-title);
+    transition: 1s;
+    &:hover {
+      color: var(--bordeaux);
+      background: rgba(#eee, 0.8);
+    }
+  }
+}
 .main-content {
   height: auto;
   width: auto;
@@ -91,4 +115,28 @@ h3 {
 }
 .osteo-text {
   font-size: 2rem;
+}
+.questions-contact {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 3rem 0;
+  background: white;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: 1s;
+  &:hover {
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+  }
+  @include xs {
+    text-decoration: underline;
+  }
+  @include sm {
+    text-decoration: underline;
+  }
 }

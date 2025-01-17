@@ -96,7 +96,7 @@ window.addEventListener("scroll", () => {
   const topElementToTopViewport = textHc.getBoundingClientRect().top + scrollTop; // Position de textHc par rapport au document
 
   // Vérifie si textHc a atteint 8 rem du haut de la page
-  if (topElementToTopViewport <= scrollTop + remToPixels2(20)) {
+  if (topElementToTopViewport <= scrollTop + remToPixels2(10)) {
     textHc.classList.add("container-hc-text-anim");
     textHc.classList.remove("container-hc-text-anim-2");
   } else {

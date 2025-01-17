@@ -1,0 +1,142 @@
+@use "../../assets/styles/media-queries" as *;
+
+.header-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/lac-4.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+.header-background {
+  background: url(../../assets/images/lac-4-v2.png);
+  background-size: cover;
+}
+.link-rdv {
+  margin-top: 20rem;
+  animation: link-rdv-anim 4s;
+  @keyframes link-rdv-anim {
+    0% {
+      opacity: 0;
+    }
+  }
+  a {
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--ff-title);
+    transition: 1s;
+    &:hover {
+      color: var(--bordeaux);
+      background: rgba(#eee, 0.8);
+    }
+  }
+}
+.main-content {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  text-align: center;
+  @include xs {
+    padding: 1rem;
+  }
+}
+
+.modalite-container {
+  height: 5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  transition: 2s all;
+  border-radius: 3rem;
+  @include xs {
+    height: 25rem;
+    background: white;
+  }
+  @include sm {
+    height: 21rem;
+    background: white;
+  }
+  &:hover {
+    height: 20rem;
+    background: white;
+  }
+  &:hover > .span-modalite {
+    display: flex;
+  }
+}
+h3 {
+  font-family: var(--ff-title);
+  font-weight: 200;
+  font-size: 4rem;
+  color: var(--bordeaux);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.span-modalite {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 2s all;
+  color: transparent;
+  @include xs {
+    display: flex;
+    color: var(--bordeaux);
+  }
+  @include sm {
+    display: flex;
+    color: var(--bordeaux);
+  }
+}
+.style-text-osteo {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.style-text-osteo-active {
+  color: var(--bordeaux);
+}
+.osteo-text-container {
+  margin: 2rem;
+  width: 80%;
+}
+.osteo-text {
+  font-size: 2rem;
+}
+.questions-contact {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 3rem 0;
+  background: white;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: 1s;
+  &:hover {
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+  }
+  @include xs {
+    text-decoration: underline;
+  }
+  @include sm {
+    text-decoration: underline;
+  }
+}
