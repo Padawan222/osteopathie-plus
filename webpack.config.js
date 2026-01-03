@@ -85,7 +85,7 @@ module.exports = {
     open: true,
     static: path.resolve(__dirname, "./dist"),
     watchFiles: ["./src/**"],
-    port: 4001,
+    port: 4002,
     hot: true,
   },
 };
