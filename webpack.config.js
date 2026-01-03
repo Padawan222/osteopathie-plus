@@ -49,7 +49,7 @@ module.exports = {
     // Copie des fichiers statiques
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public", to: "" }, // tout le contenu de public/ va dans dist/
+        { from: "sitemap.xml", to: "" }, // copie sitemap.xml à la racine de 
       ],
     }),
 
