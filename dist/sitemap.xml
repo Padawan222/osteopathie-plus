@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
-    <loc>https://osteopathie-plus.netlify.app/</loc>
+    <loc>https://osteopathie-plus.netlify.app/index.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+  
   <url>
     <loc>https://osteopathie-plus.netlify.app/osteopathie.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+  
   <url>
     <loc>https://osteopathie-plus.netlify.app/meditation.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+  
   <url>
     <loc>https://osteopathie-plus.netlify.app/medecine-rythmique.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+  
   <url>
     <loc>https://osteopathie-plus.netlify.app/qui-suis-je.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+  
   <url>
     <loc>https://osteopathie-plus.netlify.app/contact.html</loc>
+    <lastmod>2026-01-03</lastmod>
   </url>
+
 </urlset>
