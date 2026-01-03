@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    // main
     main1: path.join(__dirname, "src/index/index.js"),
     main2: path.join(__dirname, "src/index/contact/contact.js"),
     main3: path.join(__dirname, "src/index/meditation/meditation.js"),
@@ -22,17 +21,15 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: { loader: "babel-loader" },
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" },
-          { loader: "postcss-loader" },
-          { loader: "sass-loader" },
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
         ],
       },
     ],
@@ -70,9 +67,20 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
+        // Images
         {
           from: "./src/assets/images/*",
           to: "src/assets/images/[name][ext]",
+        },
+        // robots.txt
+        {
+          from: "./src/robots.txt",
+          to: "./",
+        },
+        // sitemap.xml
+        {
+          from: "./src/sitemap.xml",
+          to: "./",
         },
       ],
     }),

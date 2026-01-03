@@ -1,0 +1,8 @@
+# robots.txt pour Osteopathie Plus
+# Autorise tous les robots (Google, Bing, etc.) à explorer tout le site
+
+User-agent: *
+Disallow:
+
+# Indique le sitemap pour faciliter l'indexation
+Sitemap: https://osteopathie-plus.netlify.app/sitemap.xml
