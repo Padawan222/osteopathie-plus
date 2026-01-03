@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
+    // main
     main1: path.join(__dirname, "src/index/index.js"),
     main2: path.join(__dirname, "src/index/contact/contact.js"),
     main3: path.join(__dirname, "src/index/meditation/meditation.js"),
@@ -15,44 +16,66 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name]-bundle.js",
-    clean: true, // supprime le contenu précédent de dist à chaque build
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: {
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "images/[name][ext]", // toutes les images vont dans dist/images
-        },
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "postcss-loader" },
+          { loader: "sass-loader" },
+        ],
       },
     ],
   },
   plugins: [
-    // HTML pages
-    new HtmlWebpackPlugin({ filename: "index.html", template: "./src/index/index.html", chunks: ["main1"] }),
-    new HtmlWebpackPlugin({ filename: "contact.html", template: "./src/index/contact/contact.html", chunks: ["main2"] }),
-    new HtmlWebpackPlugin({ filename: "meditation.html", template: "./src/index/meditation/meditation.html", chunks: ["main3"] }),
-    new HtmlWebpackPlugin({ filename: "osteopathie.html", template: "./src/index/osteopathie/osteopathie.html", chunks: ["main4"] }),
-    new HtmlWebpackPlugin({ filename: "medecine-rythmique.html", template: "./src/index/medecine-rythmique/medecine-rythmique.html", chunks: ["main5"] }),
-    new HtmlWebpackPlugin({ filename: "qui-suis-je.html", template: "./src/index/qui-suis-je/qui-suis-je.html", chunks: ["main6"] }),
-
-    // Copie des fichiers statiques
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./src/index/index.html",
+      chunks: ["main1"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/index/contact/contact.html",
+      chunks: ["main2"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "meditation.html",
+      template: "./src/index/meditation/meditation.html",
+      chunks: ["main3"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "osteopathie.html",
+      template: "./src/index/osteopathie/osteopathie.html",
+      chunks: ["main4"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "medecine-rythmique.html",
+      template: "./src/index/medecine-rythmique/medecine-rythmique.html",
+      chunks: ["main5"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "qui-suis-je.html",
+      template: "./src/index/qui-suis-je/qui-suis-je.html",
+      chunks: ["main6"],
+    }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "sitemap.xml", to: "" }, // copie sitemap.xml à la racine de 
+        {
+          from: "./src/assets/images/*",
+          to: "src/assets/images/[name][ext]",
+        },
       ],
     }),
-
     new CleanWebpackPlugin(),
   ],
   stats: "maximal",
@@ -60,7 +83,7 @@ module.exports = {
   mode: "development",
   devServer: {
     open: true,
-    static: path.resolve(__dirname, "dist"),
+    static: path.resolve(__dirname, "./dist"),
     watchFiles: ["./src/**"],
     port: 4002,
     hot: true,
