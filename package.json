@@ -38,5 +38,7 @@
   "devDependencies": {
     "url-loader": "^4.1.1"
   },
-  "description": ""
+  "description": "", "engines": {
+    "node": ">=22"
+  }
 }
