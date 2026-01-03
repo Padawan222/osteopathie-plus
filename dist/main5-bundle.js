@@ -1311,7 +1311,7 @@ module.exports = styleTagTransform;
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "ed8a2421ce908a9b815d.png";
+module.exports = __webpack_require__.p + "images/lac-4-v2.png";
 
 /***/ }),
 
@@ -1321,7 +1321,7 @@ module.exports = __webpack_require__.p + "ed8a2421ce908a9b815d.png";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "b89a9efbb40687525a12.jpeg";
+module.exports = __webpack_require__.p + "images/lac-4.jpeg";
 
 /***/ })
 
